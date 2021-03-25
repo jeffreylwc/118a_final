@@ -1,2 +1,9 @@
 # Comparison of Supervised Learning Algorithms
 
+This empirical study was inspired by Caruana and Niculescu-Mizil's study to evaluate supervised learning algorithms. Random forests, logisitc regression, and K-nearest neighbors were used for the comparision of the three algorithms, along with grid search with five fold cross validation for selecting the best hyperparameters. Accuracy scores were used as the performance metric of each learning algorithms.
+
+Three large datasets, ADULT, COV_TYPE, and LETTER, were retrieved from the UCI machine learning repository and were used in this study. Each dataset has over ten thousands samples, which is adequate to perform five fold cross validation. Multiple datasets were used to increase variance and better test the performance of each algorithm. Each of the three algorithms used in this study uses different parameters to compute the weights for classification, allowing variation in performance. To find the best parameters for each algorithm, cross validation was performed to improve accuracy of the classifiers.
+
+Two performance metrics were used to evaluate the performances of the classifiers: mean classification accuracy for each algorithm combo and mean classification accuracy for each algorithm. In both performances, random forests produced the highest mean classification accuracy, while logistic regression produced the worst. The 2 sample t-test with the p-value less than 0.05 was used on both performance to determine whether the mean accuracy of an algorithm differs significantly from other algorithms. With the p-values less than 0.05 on all algorithms, the experiments further demonstrate that random forests performed better than K-nearest neighbors, and K-nearest neighbors performed better than logisitc regression.  
+
+The paper further details the methods used in this study and the performances of the algorithms. 
